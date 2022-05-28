@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- CSS only -->
+  <!-- Link de la plantilla de bootstrap-->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+  <!--cuerpo de la pagina -->
+
+<body>
+    <!--Componente Navbar -->
+      <!--Consiste en el encabezado de la pagina, en donde muestra los servicios de la página -->
+  <div>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <!--Consiste en la barra de navegacion, en donde muestra los servicios de la página -->
+        <a class="navbar-brand" href="#">INTELIGENCIA ARTIFICIAL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <!--Barra de navegacion para contenido -->
+              <a class="nav-link" href="#">CONTENIDO</a>
+            </li>
+            <li class="nav-item dropdown">
+               <!--Barra de navegacion para opciones con menu desplegable   -->
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                OPCIONES
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <!--Barra de navegacion  menu desplegable  tipos de inteligencia artificial, caracteristica, ejemplos -->
+                <li><a class="dropdown-item" href="#">TIPOS DE INTELIGENCIA ARTIFICIAL</a></li>
+                <li><a class="dropdown-item" href="#">CARACTERISTICAS</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">EJEMPLOS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <!--Barra de navegacion para opcion ayuda  -->
+              <a class="nav-link disabled">AYUDA</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Consulta" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+    <!-- Uso del componente Carousel, permite ingresar imágenes como fondo de nuestra página-->
+  <!-- Se usaron 3 tipos de imágenes-->
+  <!-- Es un conjunto donde se muestran varias imagenes que avanzan de manera sucesiva -->
+  <div>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <!-- Se usa carrucel en la imagen 1-->
+          <img src="{{url_for('static', filename='Img/int-artifiacial.jpg')}}" alt="" class="d-block w-100" width="300px" height="500px">
+        </div>
+        <div class="carousel-item">
+          <!-- Se usa carrucel en la imagen 2-->
+          <img src="{{url_for('static', filename='Img/int-art2.jpg')}}" class="d-block w-100" alt="..." width="300px" height="500px">
+        </div>
+        <!-- Se usa carrucel en la unagen 3-->
+        <div class="carousel-item">
+          <img src="{{url_for('static', filename='Img/intart-3.jpg')}}" class="d-block w-100" alt="..." width="300px" height="500px">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+    <!-- Uso del blockquote, tiene referencia a un bloque de texto en la pagina-->
+      <!-- a la vez permite citar otra fuente en forma de bloques que se haya tomado en cuenta-->
+        <!--usualmente son en párrafos -->
+
+        <!--Se usó la etiqueta de center-->
+        <center> 
+  <div>
+    <blockquote cite='http://html.conclase.net/w3c/html401...def-BLOCKQUOTE'>
+      <p>
+        <strong>  Soluciones de IA y aprendizaje automático</strong> <br>
+       <div> En Google, la IA está en nuestro ADN. En asociación con Google Cloud, <br>
+         los líderes empresariales pueden aprovechar el poder de las soluciones de IA <br>
+         especialmente diseñadas para transformar sus organizaciones y resolver problemas del mundo real.</div>
+      </p>
+    </blockquote>
+  </div>
+  <!--Componente cards- para crear dos cartas -->
+  <div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">CARD</h5>
+              
+              
+            <!-- contenido de la primera carta-->
+            <img src="{{url_for('static', filename='Img/encuentro.jpg')}}"class="d-block w-100" alt="..." width="600px" height="275px">
+            <p class="card-text">La IA permite que los sistemas tecnológicos perciban su entorno, se relacionen con él, resuelvan problemas y actúen con un fin específico.</p>
+            <a href="#" class="btn btn-primary">BOTON</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">CARD</h5>
+
+            <img src="{{url_for('static', filename='Img/vP4wsup.png')}}" class="d-block w-100" alt="..." width="600px" height="250px">
+               <!--Texto de la segunda carta -->
+  
+            <p class="card-text">La IA ofrece una mayor productividad para los equipos de ventas, ya que permite centrarse en las oportunidades que pueden llevarse al éxito, así como ahorrar tiempo al personal de ventas durante el registro de información</p>
+             <!--Boton-->
+            <a href="#" class="btn btn-primary">BOTON</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div><br><br>
+  <!--Componente button, indica aplicaciones de la inteligencia artificial-->
+  <strong>  Aplicaciones  de la IA </strong> <br>
+  <button type="button" class="btn btn-warning">Compras por internet y publicidad </button>
+<button type="button" class="btn btn-warning">Búsquedas en la web</button>
+<button type="button" class="btn btn-warning">Asistentes personales digitales </button>
+<button type="button" class="btn btn-warning">Traducciones automáticas</button>
+<button type="button" class="btn btn-warning"> Internet de las Cosas</button>
+
+</div>
+<br><br>
+  <!--Componente forms -->
+    <!--FORMULARIO LOGIN -->
+
+    <div>
+      <strong>  FORMULARIO LOGIN</strong> <br>
+      <form>
+        <div class="form-group">
+          <!--Entrada para el correo electronico -->
+  
+          <label for="exampleInputEmail1">Correo Electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="width: 300px;">
+        </div>
+        <div class="form-group">
+          <!--Entrada para la clave-->
+          <label for="exampleInputPassword1">Contraseña</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width: 300px;">
+        </div><br><br>
+       
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div> </center>
+</body>
+</html>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
